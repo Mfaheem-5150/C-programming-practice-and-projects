@@ -1,22 +1,20 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-	int num, c, sum = 0, rem;
-	cout << "enter a number ";
+	int num, org_num, reverse = 0;
+	cout << "Enter a number: ";
 	cin >> num;
-	c = num;
+	org_num = num;
 	while (num != 0)
 	{
-		rem = num % 10;
-		sum = (sum * 10) + rem;
+		reverse = reverse * 10 + num % 10;
 		num = num / 10;
 	}
-	if (sum == c)
-	{
-		cout << "palindrome";
-	}
+	if (org_num == reverse)
+		cout << "Palindrome";
 	else
-		cout << "not palindrome";
+		cout << "Not Palindrome";
+
 	return 0;
 }
